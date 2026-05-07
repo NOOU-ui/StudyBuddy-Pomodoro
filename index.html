@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="study.css">
+</head>
+<body>
+    <!-- Cercles décoratifs en fond -->
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+
+    <div class="app-card">
+        <div id="character-box">
+            <div id="status-icon">✨</div>
+        </div>
+        
+        <h1 id="title">Study Buddy</h1>
+        <p id="message">Prêt(e) à conquérir le monde ?</p>
+
+        <div id="timer-display">25:00</div>
+
+        <div class="controls">
+            <button id="btn-start" class="main-btn">DÉMARRER LE FOCUS</button>
+            
+            <div class="emergency-row">
+                <button id="btn-tired" class="sub-btn">
+                    <span>🥱</span> Pause Douce
+                </button>
+                <button id="btn-unmotivated" class="sub-btn">
+                    <span>🚀</span> Mini Boost
+                </button>
+            </div>
+            
+            <button id="btn-reset">Réinitialiser l'espace</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
