@@ -1,0 +1,133 @@
+:root {
+    --primary: #ff79c6;
+    --secondary: #8be9fd;
+    --bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    --glass: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    background: var(--bg-gradient);
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Cercles décoratifs animés */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    animation: float 10s infinite alternate;
+}
+.c1 { width: 300px; height: 300px; background: #ff79c6; top: -50px; left: -50px; opacity: 0.4; }
+.c2 { width: 400px; height: 400px; background: #8be9fd; bottom: -100px; right: -100px; opacity: 0.4; }
+
+@keyframes float {
+    from { transform: translate(0, 0); }
+    to { transform: translate(50px, 50px); }
+}
+
+.app-card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    text-align: center;
+    width: 380px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+#character-box {
+    background: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+#status-icon { font-size: 50px; }
+
+#title {
+    font-family: 'Fredoka One', cursive;
+    color: #44475a;
+    margin: 0;
+    font-size: 2rem;
+}
+
+#message { color: #6272a4; font-size: 0.9rem; margin-bottom: 30px; }
+
+#timer-display {
+    font-family: 'Fredoka One', cursive;
+    font-size: 4.5rem;
+    color: #44475a;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 18px;
+    width: 100%;
+    border-radius: 20px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 8px 0px #d45fa3;
+    transition: all 0.1s;
+}
+
+.main-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0px #d45fa3;
+}
+
+.emergency-row {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.sub-btn {
+    flex: 1;
+    background: white;
+    border: 2px solid #f1f2f6;
+    padding: 12px;
+    border-radius: 18px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #44475a;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.sub-btn:hover {
+    border-color: var(--secondary);
+    background: #faffff;
+    transform: translateY(-3px);
+}
+
+#btn-reset {
+    margin-top: 25px;
+    background: none;
+    border: none;
+    color: #bdc3c7;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
